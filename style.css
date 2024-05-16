@@ -1,0 +1,334 @@
+/* Hero Section CSS */
+#hero {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+}
+
+#hero .opacity {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #064e3b;
+  z-index: 3;
+  opacity: 50%;
+}
+
+#hero .list .item img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+
+#hero .list {
+  width: 100%;
+  height: 100%;
+}
+
+#hero .item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+#hero .item .content {
+  position: absolute;
+  max-width: 700px;
+  top: 25%;
+  left: 30%;
+  right: 30%;
+  color: #fff;
+  z-index: 4;
+}
+
+#hero .item.active-slide {
+  opacity: 1;
+}
+
+#hero .item .content h2 {
+  font-size: 32px;
+  margin-bottom: 18px;
+}
+
+#hero .item .content h2:nth-child(1) {
+  font-size: 64px;
+  font-weight: 900;
+}
+
+#hero .item .content h2:nth-child(2) {
+  font-size: 39px;
+  font-weight: 300;
+}
+
+#hero .item .content h2:nth-child(3) {
+  font-size: 39px;
+  font-weight: 800;
+  margin-bottom: 64px;
+}
+
+#hero .list .item:nth-child(3) h2:nth-child(3) {
+  font-size: 34px;
+}
+
+#hero .list .item:nth-child(4) h2:nth-child(3) {
+  font-size: 34px;
+}
+
+#hero .item .content .learn-more-btn {
+  color: #fff;
+  background-color: transparent;
+  padding: 16px 48px;
+  font-size: 13px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid #34d399;
+  border-radius: 8px;
+  transition: all 0.3s;
+  cursor: pointer;
+  filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.5));
+  display: inline-block;
+}
+
+#hero .item .content .learn-more-btn:hover {
+  background-color: #34d399;
+}
+
+.dots {
+  display: flex;
+  position: absolute;
+  gap: 24px;
+  bottom: 10%;
+  left: 43%;
+  z-index: 10;
+}
+
+.dot {
+  width: 25px;
+  height: 25px;
+  border-radius: 20px;
+  border: 2px solid var(--light-green-2);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.js-dot.active {
+  background-color: var(--light-green-2);
+}
+
+/* Gallery css */
+#gallery {
+  background-color: var(--mint-green);
+  padding: var(--space-padding);
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-container h2 {
+  font-size: 5.5rem;
+  font-weight: 900;
+  color: var(--hunter-green);
+  margin-bottom: 12px;
+}
+
+.header-container p {
+  font-family: "Montserrat Alternates", sans-serif;
+  color: #059669;
+  font-size: 17px;
+  margin-bottom: 64px;
+}
+
+.gallery-container {
+  margin-bottom: 64px;
+  position: relative;
+}
+
+.terrain-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 36px;
+}
+
+.gallery-container .terrain-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.air-img,
+.land-img,
+.sea-img {
+  position: relative;
+}
+
+.animal-link {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  text-decoration: none;
+  background-color: #fff;
+  border-radius: 10px;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.animal-link span {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #000;
+  font-size: 2.5rem;
+}
+
+.arrow-up-right {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: block;
+}
+
+.air-img:hover > .animal-link,
+.land-img:hover > .animal-link,
+.sea-img:hover > .animal-link {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Cards css */
+.cards-container {
+  padding: 34px 24px;
+  background-color: var(--light-green);
+  color: #fff;
+  display: flex;
+  gap: 26px;
+  border-radius: 30px;
+  border: 2px solid rgba(167, 243, 208, 0.5);
+  filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.5));
+  align-items: center;
+}
+
+.cards-container > * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards-container img {
+  width: 60px;
+  height: 60px;
+}
+
+.cards-container .sea .header-card img {
+  filter: brightness(0) invert(1);
+}
+
+.cards-container .header-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.air,
+.land,
+.sea {
+  height: 250px;
+}
+
+.air p,
+.land p,
+.sea p {
+  text-align: center;
+  font-weight: 250;
+}
+
+.cards-container .header-card h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.divider {
+  background-color: #fff;
+  height: 170px;
+  width: 10px;
+}
+
+/* All animations */
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.air-img {
+  transition-delay: 100ms;
+  z-index: 1;
+}
+
+.land-img {
+  transition-delay: 200ms;
+  z-index: 2;
+}
+
+.sea-img {
+  transition-delay: 300ms;
+  z-index: 3;
+}
+
+@keyframes showContent {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#hero .list .item.active-slide .content h2:nth-child(1),
+#hero .list .item.active-slide .content h2:nth-child(2),
+#hero .list .item.active-slide .content h2:nth-child(3),
+#hero .list .item.active-slide .content .learn-more-btn {
+  transform: translateY(30px);
+  opacity: 0;
+  animation: showContent 0.5s 0.7s ease-in-out 1 forwards;
+}
+
+#hero .list .item.active-slide .content h2:nth-child(2) {
+  animation-delay: 1s;
+}
+
+#hero .list .item.active-slide .content h2:nth-child(3) {
+  animation-delay: 1.3s;
+}
+
+#hero .list .item.active-slide .content .learn-more-btn {
+  animation-delay: 1.5s;
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}

@@ -1,0 +1,40 @@
+.animal.philippine-eagle img {
+  object-position: 22% 22%;
+}
+
+.animal.philippine-cockatoo img {
+  object-position: 30% 30%;
+}
+
+.animal.philippine-trogon img {
+  object-position: 20% 20%;
+}
+
+.animal.philippine-leafbird img {
+  object-position: right;
+}
+
+.animal-phillipine-falconet img {
+  object-position: left;
+}
+
+.animal.philippine-magpie-robin h2 {
+  font-size: 2rem;
+}
+
+.animal.violet-goby img {
+  object-position: left;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}

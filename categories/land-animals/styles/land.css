@@ -1,0 +1,20 @@
+.animal.palawan-peacock-pheasant .animal-name h2 {
+  font-size: 1.9rem;
+}
+
+.animal.philippine-long-tailed-macaque .animal-name h2 {
+  font-size: 1.7rem;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
