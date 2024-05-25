@@ -4,12 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bagwis</title>
+    <link
+      rel="shortcut icon"
+      href="../../assets/icons/feather-icon.png"
+      type="image/x-icon"
+    />
     <!-- General CSS -->
     <link rel="stylesheet" href="../../styles/general.css" />
     <!-- Header CSS -->
     <link rel="stylesheet" href="../../styles/header.css" />
     <!-- Hero CSS -->
     <link rel="stylesheet" href="../styles/hero.css" />
+    <!-- Youtube iFrame -->
+    <link rel="stylesheet" href="../styles/youtube-animal.css" />
     <!-- Gallery CSS -->
     <link rel="stylesheet" href="../styles/gallery.css" />
     <!-- Land Animals CSS -->
@@ -18,13 +25,11 @@
     <link rel="stylesheet" href="../../styles/footer.css" />
   </head>
   <body>
-    <!-- TODO: Make the page responsive -->
-    <!-- TODO: Make search filter -->
     <header>
-      <nav class="right-section">
+      <nav class="left-section">
         <ul>
           <li>
-            <a href="#hero">
+            <a href="#hero" class="home-link">
               <img
                 class="home-icon"
                 src="../../assets/icons/home.png"
@@ -34,7 +39,7 @@
             >
           </li>
           <li>
-            <a href="#gallery">
+            <a href="#gallery" class="gallery-link">
               <img
                 class="gallery-icon"
                 src="../../assets/icons/gallery-round-svgrepo-com.svg"
@@ -43,8 +48,8 @@
               Gallery
             </a>
           </li>
-          <li>
-            <a href="#about-us">
+          <li class="about-us-container">
+            <a href="#about-us" class="about-us">
               <img
                 class="about-us-icon"
                 src="../../assets/icons/user.png"
@@ -52,23 +57,37 @@
               />
               About Us
             </a>
+            <div class="sub-menus">
+              <ul>
+                <li>
+                  <a href="#">Brishia</a>
+                  <a href="#">Ethan</a>
+                  <a href="#">Emil</a>
+                  <a href="#">Ezekiel</a>
+                  <a href="#">Florence</a>
+                  <a href="#">Rence</a>
+                  <a href="#">Genesis</a>
+                  <a href="#">Yainnier</a>
+                </li>
+              </ul>
+            </div>
           </li>
         </ul>
       </nav>
       <div class="middle-section">
-        <div class="image-container">
+        <a href="../../index.html"" class="image-container">
           <img
             class="bagwis-logo"
             src="../../assets/icons/feather.png"
             alt="Logo"
           />
-        </div>
-        <h2>Bagwis</h2>
+        </a>
+        <a href="../../index.html">Bagwis</a>
       </div>
-      <nav class="left-section">
+      <nav class="right-section">
         <ul>
           <li>
-            <a href="#">
+            <a href="#" class="contact-link">
               <img
                 class="contact-icon"
                 src="../../assets/icons/phone-call.png"
@@ -78,7 +97,7 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#" class="donate-link">
               <img
                 class="donate-icon"
                 src="../../assets/icons/donate-svgrepo-com.svg"
@@ -90,6 +109,21 @@
         </ul>
       </nav>
     </header>
+
+    <!-- Youtube Display -->
+    <div class="iframe-container hidden">
+      <iframe
+        src=""
+        frameborder="0"
+        height="500px"
+        width="900px"
+        class="youtube-link"
+      ></iframe>
+      <button class="close-btn">
+        <img src="../../assets/icons/close-md-svgrepo-com.svg" alt="" />
+      </button>
+      <div class="iframe-opacity"></div>
+    </div>
 
     <main>
       <section id="hero">
@@ -186,8 +220,6 @@
         </div>
       </section>
 
-      <!-- TODO: Quick description of: -->
-      <!-- !Deer -->
       <section id="gallery">
         <div class="header-container hidden">
           <h2>Animal Gallery</h2>
@@ -200,9 +232,13 @@
           <div class="animal-gallery">
             <div class="animal philippine-tamaraw" data-reveal="top">
               <div class="animal-wrapper">
-                <div class="circle-hover">
-                  <span>Author here</span>
-                </div>
+                <button class="circle-hover tamaraw">
+                  <img
+                    src="../../assets/icons/play-circle-ver2.svg"
+                    alt=""
+                    class="play-btn"
+                  />
+                </button>
                 <img src="./assets/images/ph-tamaraw.jpg" alt="" />
               </div>
               <div class="animal-name">
@@ -214,7 +250,10 @@
                   is a critically endangered species.
                 </p>
               </div>
-              <a class="read-more-btn">
+              <a
+                href="./animals/philippine-tamaraw/philippine-tamaraw.html"
+                class="read-more-btn"
+              >
                 <span>
                   <span>Read more</span>
                 </span>
@@ -222,9 +261,13 @@
             </div>
             <div class="animal philippine-tarsier" data-reveal="top">
               <div class="animal-wrapper">
-                <div class="circle-hover">
-                  <span>author here</span>
-                </div>
+                <button class="circle-hover tarsier">
+                  <img
+                    src="../../assets/icons/play-circle-ver2.svg"
+                    alt=""
+                    class="play-btn"
+                  />
+                </button>
                 <img src="./assets/images/ph-tarsier.webp" alt="" />
               </div>
               <div class="animal-name">
@@ -236,7 +279,10 @@
                   eyes and nocturnal habits.
                 </p>
               </div>
-              <a href="#" class="read-more-btn first">
+              <a
+                href="./animals/philippine-tarsier/philippine-tarsier.html"
+                class="read-more-btn first"
+              >
                 <span>
                   <span>Read more</span>
                 </span>
@@ -244,9 +290,13 @@
             </div>
             <div class="animal philippine-mouse-deer" data-reveal="top">
               <div class="animal-wrapper">
-                <div class="circle-hover">
-                  <span>author here</span>
-                </div>
+                <button class="circle-hover mouse-deer">
+                  <img
+                    src="../../assets/icons/play-circle-ver2.svg"
+                    alt=""
+                    class="play-btn"
+                  />
+                </button>
                 <img src="./assets/images/ph-mouse-deer.jpg" alt="" />
               </div>
               <div class="animal-name">
@@ -254,11 +304,13 @@
               </div>
               <div class="short-intro">
                 <p>
-                  The Philippine mouse-deer, also known as the Balabac
-                  chevrotain or pilandok, is a small, nocturnal ruminant.
+                  The Philippine mouse-deer, or Balabac chevrotain, is a small, nocturnal ruminant.
                 </p>
               </div>
-              <a class="read-more-btn">
+              <a
+                href="./animals/philippine-mouse-deer/philippine-mouse-deer.html"
+                class="read-more-btn"
+              >
                 <span>
                   <span>Read more</span>
                 </span>
@@ -266,9 +318,13 @@
             </div>
             <div class="animal philippine-deer" data-reveal="top">
               <div class="animal-wrapper">
-                <div class="circle-hover">
-                  <span>author here</span>
-                </div>
+                <button class="circle-hover deer">
+                  <img
+                    src="../../assets/icons/play-circle-ver2.svg"
+                    alt=""
+                    class="play-btn"
+                  />
+                </button>
                 <img src="./assets/images/ph-deer.webp" alt="" />
               </div>
               <div class="animal-name">
@@ -280,30 +336,38 @@
                   odio dolor beatae. Odio maxime.
                 </p>
               </div>
-              <a class="read-more-btn">
+              <a
+                href="./animals/philippine-deer/philippine-deer.html"
+                class="read-more-btn"
+              >
                 <span>
                   <span>Read more</span>
                 </span>
               </a>
             </div>
-            <div class="animal philippine-wartry-pig" data-reveal="top">
+            <div class="animal philippine-warty-pig" data-reveal="top">
               <div class="animal-wrapper">
-                <div class="circle-hover">
-                  <span>author here</span>
-                </div>
+                <button class="circle-hover warty-pig">
+                  <img
+                    src="../../assets/icons/play-circle-ver2.svg"
+                    alt=""
+                    class="play-btn"
+                  />
+                </button>
                 <img src="./assets/images/ph-wartry-pig.jpg" alt="" />
               </div>
               <div class="animal-name">
-                <h2>Philippine Watry Pig</h2>
+                <h2>Philippine Warty Pig</h2>
               </div>
               <div class="short-intro">
                 <p>
-                  They have tufts of hair on the top of their head and on the
-                  lower sides of their jaws, as well as four warts on their
-                  faces.
+                  They have hair tufts on their heads and jaws, plus four warts on their faces.
                 </p>
               </div>
-              <a class="read-more-btn">
+              <a
+                href="./animals/philippine-warty-pig/philippine-warty-pig.html"
+                class="read-more-btn"
+              >
                 <span>
                   <span>Read more</span>
                 </span>
@@ -311,9 +375,13 @@
             </div>
             <div class="animal philippine-crocodile" data-reveal="top">
               <div class="animal-wrapper">
-                <div class="circle-hover">
-                  <span>author here</span>
-                </div>
+                <button class="circle-hover crocodile">
+                  <img
+                    src="../../assets/icons/play-circle-ver2.svg"
+                    alt=""
+                    class="play-btn"
+                  />
+                </button>
                 <img src="./assets/images/ph-croc.jpg" alt="" />
               </div>
               <div class="animal-name">
@@ -325,7 +393,10 @@
                   broad snouts and thick bony plates on their backs.
                 </p>
               </div>
-              <a class="read-more-btn">
+              <a
+                href="./animals/philippine-crocodile/philippine-crocodile.html"
+                class="read-more-btn"
+              >
                 <span>
                   <span>Read more</span>
                 </span>
@@ -333,9 +404,13 @@
             </div>
             <div class="animal philippine-sailfin-lizard" data-reveal="top">
               <div class="animal-wrapper">
-                <div class="circle-hover">
-                  <span>author here</span>
-                </div>
+                <button class="circle-hover sailfin-lizard">
+                  <img
+                    src="../../assets/icons/play-circle-ver2.svg"
+                    alt=""
+                    class="play-btn"
+                  />
+                </button>
                 <img src="./assets/images/ph-sailfin-lizard.jpg" alt="" />
               </div>
               <div class="animal-name">
@@ -347,7 +422,10 @@
                   on its back.
                 </p>
               </div>
-              <a class="read-more-btn">
+              <a
+                href="./animals/philippine-sailfin-lizard/philippine-sailfin-lizard.html"
+                class="read-more-btn"
+              >
                 <span>
                   <span>Read more</span>
                 </span>
@@ -355,9 +433,13 @@
             </div>
             <div class="animal philippine-palm-civet" data-reveal="top">
               <div class="animal-wrapper">
-                <div class="circle-hover">
-                  <span>author here</span>
-                </div>
+                <button class="circle-hover palm-civet">
+                  <img
+                    src="../../assets/icons/play-circle-ver2.svg"
+                    alt=""
+                    class="play-btn"
+                  />
+                </button>
                 <img src="./assets/images/ph-palm-civet.jpg" alt="" />
               </div>
               <div class="animal-name">
@@ -369,7 +451,10 @@
                   areas across the Philippines.
                 </p>
               </div>
-              <a class="read-more-btn">
+              <a
+                href="./animals/philippine-palm-civet/philippine-palm-civet.html"
+                class="read-more-btn"
+              >
                 <span>
                   <span>Read more</span>
                 </span>
@@ -377,9 +462,13 @@
             </div>
             <div class="animal philippine-pangolin" data-reveal="top">
               <div class="animal-wrapper">
-                <div class="circle-hover">
-                  <span>author here</span>
-                </div>
+                <button class="circle-hover pangolin">
+                  <img
+                    src="../../assets/icons/play-circle-ver2.svg"
+                    alt=""
+                    class="play-btn"
+                  />
+                </button>
                 <img src="./assets/images/ph-pangolin.jpg" alt="" />
               </div>
               <div class="animal-name">
@@ -391,7 +480,10 @@
                   Philippines.
                 </p>
               </div>
-              <a class="read-more-btn">
+              <a
+                href="./animals/palawan-pangolin/palawan-pangolin.html"
+                class="read-more-btn"
+              >
                 <span>
                   <span>Read more</span>
                 </span>
@@ -399,9 +491,13 @@
             </div>
             <div class="animal philippine-bearcat" data-reveal="top">
               <div class="animal-wrapper">
-                <div class="circle-hover">
-                  <span>author here</span>
-                </div>
+                <button class="circle-hover bearcat">
+                  <img
+                    src="../../assets/icons/play-circle-ver2.svg"
+                    alt=""
+                    class="play-btn"
+                  />
+                </button>
                 <img src="./assets/images/ph-bearcat.jpg" alt="" />
               </div>
               <div class="animal-name">
@@ -409,11 +505,13 @@
               </div>
               <div class="short-intro">
                 <p>
-                  Palawan bearcat, is a striking mammal indigenous to the lush
-                  rainforests of Palawan Island in the Philippines.
+                  A striking mammal native to Palawan Island's rainforests.
                 </p>
               </div>
-              <a class="read-more-btn">
+              <a
+                href="./animals/palawan-bearcat/palawan-bearcat.html"
+                class="read-more-btn"
+              >
                 <span>
                   <span>Read more</span>
                 </span>
@@ -421,9 +519,13 @@
             </div>
             <div class="animal philippine-horned-frog" data-reveal="top">
               <div class="animal-wrapper">
-                <div class="circle-hover">
-                  <span>author here</span>
-                </div>
+                <button class="circle-hover horned-frog">
+                  <img
+                    src="../../assets/icons/play-circle-ver2.svg"
+                    alt=""
+                    class="play-btn"
+                  />
+                </button>
                 <img src="./assets/images/ph-horned-frog.jpg" alt="" />
               </div>
               <div class="animal-name">
@@ -435,7 +537,10 @@
                   eyes, found in the forest floor leaf litter of Mindanao.
                 </p>
               </div>
-              <a class="read-more-btn">
+              <a
+                href="./animals/philippine-horned-frog/philippine-horned-frog.html"
+                class="read-more-btn"
+              >
                 <span>
                   <span>Read more</span>
                 </span>
@@ -443,9 +548,13 @@
             </div>
             <div class="animal philippine-forest-turtle" data-reveal="top">
               <div class="animal-wrapper">
-                <div class="circle-hover">
-                  <span>author here</span>
-                </div>
+                <button class="circle-hover forest-turtle">
+                  <img
+                    src="../../assets/icons/play-circle-ver2.svg"
+                    alt=""
+                    class="play-btn"
+                  />
+                </button>
                 <img src="./assets/images/palawan-forest-turtle.jpg" alt="" />
               </div>
               <div class="animal-name">
@@ -457,7 +566,10 @@
                   islands of Palawan and Leyte.
                 </p>
               </div>
-              <a class="read-more-btn">
+              <a
+                href="./animals/philippine-forest-turtle/philippine-forest-turtle.html"
+                class="read-more-btn"
+              >
                 <span>
                   <span>Read more</span>
                 </span>
@@ -465,9 +577,13 @@
             </div>
             <div class="animal palawan-peacock-pheasant" data-reveal="top">
               <div class="animal-wrapper">
-                <div class="circle-hover">
-                  <span>author here</span>
-                </div>
+                <button class="circle-hover peacock">
+                  <img
+                    src="../../assets/icons/play-circle-ver2.svg"
+                    alt=""
+                    class="play-btn"
+                  />
+                </button>
                 <img
                   src="./assets/images/palawan-peacock-pheasant.jpeg"
                   alt=""
@@ -483,7 +599,10 @@
                   display.
                 </p>
               </div>
-              <a class="read-more-btn">
+              <a
+                href="./animals/palawan-peacock-pheasant/palawan-peacock-pheasant.html"
+                class="read-more-btn"
+              >
                 <span>
                   <span>Read more</span>
                 </span>
@@ -491,9 +610,13 @@
             </div>
             <div class="animal panay-cloudrunner" data-reveal="top">
               <div class="animal-wrapper">
-                <div class="circle-hover">
-                  <span>author here</span>
-                </div>
+                <button class="circle-hover cloudrunner">
+                  <img
+                    src="../../assets/icons/play-circle-ver2.svg"
+                    alt=""
+                    class="play-btn"
+                  />
+                </button>
                 <img src="./assets/images/panay-cloudrunner.jpg" alt="" />
               </div>
               <div class="animal-name">
@@ -505,7 +628,10 @@
                   island of Panay.
                 </p>
               </div>
-              <a class="read-more-btn">
+              <a
+                href="./animals/panay-cloudrunner/panay-cloudrunner.html"
+                class="read-more-btn"
+              >
                 <span>
                   <span>Read more</span>
                 </span>
@@ -516,9 +642,13 @@
               data-reveal="top"
             >
               <div class="animal-wrapper">
-                <div class="circle-hover">
-                  <span>author here</span>
-                </div>
+                <button class="circle-hover macaque">
+                  <img
+                    src="../../assets/icons/play-circle-ver2.svg"
+                    alt=""
+                    class="play-btn"
+                  />
+                </button>
                 <img src="./assets/images/ph-long-tailed-macaque.jpg" alt="" />
               </div>
               <div class="animal-name">
@@ -530,7 +660,10 @@
                   parts of the Philippines.
                 </p>
               </div>
-              <a class="read-more-btn">
+              <a
+                href="./animals/philippine-long-tailed-macaque/philippine-long-tailed-macaque.html"
+                class="read-more-btn"
+              >
                 <span>
                   <span>Read more</span>
                 </span>
@@ -541,30 +674,73 @@
       </section>
     </main>
 
-    <footer id="about">
-      <div class="terms-policy">
-        <p>Terms of use</p>
-        <div class="divider-line"></div>
-        <p>Privacy Policy</p>
-      </div>
-      <div class="socials">
-        <p>Get in touch with us</p>
-        <div class="social-images">
-          <img src="../../assets/icons/facebook.svg" alt="" />
-          <img src="../../assets/icons/instagram-svgrepo-com.svg" alt="" />
-          <img src="../../assets/icons/linkedin.svg" alt="" />
-          <img src="../../assets/icons/pinterest-svgrepo-com.svg" alt="" />
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-            <path
-              d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
+    <footer>
+      <div class="upper-section">
+        <div class="site-links wrapper">
+          <h3>Picture Links</h3>
+          <a href="#">iNaturalist</a>
+          <a href="#">eBird</a>
+          <a href="#">Wikipedia</a>
+        </div>
+        <div class="legal-information wrapper">
+          <h3>Legal Information</h3>
+          <p>Privacy Policy</p>
+          <p>Terms of Service</p>
+          <p>Copyright Information</p>
+        </div>
+        <div class="social-media wrapper">
+          <h3>Social Media Links</h3>
+          <div class="facebook link">
+            <img src="../../assets/icons/facebook.svg" alt="" class="icon" />
+            <a href="#">Facebook</a>
+          </div>
+          <div class="twitter link">
+            <img src="../../assets/icons/x-twitter.svg" alt="" class="icon" />
+            <a href="#">Twitter</a>
+          </div>
+          <div class="instagram link">
+            <img
+              src="../../assets/icons/instagram-svgrepo-com.svg"
+              alt=""
+              class="icon"
             />
-          </svg>
+            <a href="#">Instagram</a>
+          </div>
+          <div class="pinterest link">
+            <img
+              src="../../assets/icons/pinterest-svgrepo-com.svg"
+              alt=""
+              class="icon"
+            />
+            <a href="#">Pinterest</a>
+          </div>
+        </div>
+        <div class="newsletter wrapper">
+          <h3>Newsletter Signup</h3>
+          <p>Stay updated with our latest news and stories!</p>
+          <div class="email-input">
+            <input type="text" placeholder="Enter your email here" />
+            <button>
+              <img src="../../assets/icons/arrow-right-solid.svg" alt="" />
+            </button>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" />
+            <p>
+              By checking this box, you consent to receive email communications
+              from us.
+            </p>
+          </div>
         </div>
       </div>
+
+      <div class="divider-line"></div>
+      <p class="bagwis-footer-text">© 2024 Bagwis, All rights reserved.</p>
     </footer>
 
     <!-- Javascript -->
     <script src="../src/scroll-reveal-animation.js"></script>
     <script src="../src/automatic-slide.js"></script>
+    <script src="../src/land-youtube-animals.js"></script>
   </body>
 </html>

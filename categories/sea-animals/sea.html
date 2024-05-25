@@ -4,12 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bagwis</title>
+    <link
+      rel="shortcut icon"
+      href="../../assets/icons/feather-icon.png"
+      type="image/x-icon"
+    />
     <!-- General CSS -->
     <link rel="stylesheet" href="../../styles/general.css" />
     <!-- Header CSS -->
     <link rel="stylesheet" href="../../styles/header.css" />
     <!-- Hero CSS -->
     <link rel="stylesheet" href="../styles/hero.css" />
+    <!-- Youtube iFrame -->
+    <link rel="stylesheet" href="../styles/youtube-animal.css" />
     <!-- Gallery CSS -->
     <link rel="stylesheet" href="../styles/gallery.css" />
     <!-- Sea Animals CSS -->
@@ -18,13 +25,11 @@
     <link rel="stylesheet" href="../../styles/footer.css" />
   </head>
   <body>
-    <!-- TODO: Make the page responsive -->
-    <!-- TODO: Make search filter -->
     <header>
-      <nav class="right-section">
+      <nav class="left-section">
         <ul>
           <li>
-            <a href="#hero">
+            <a href="#hero" class="home-link">
               <img
                 class="home-icon"
                 src="../../assets/icons/home.png"
@@ -34,7 +39,7 @@
             >
           </li>
           <li>
-            <a href="#gallery">
+            <a href="#gallery" class="gallery-link">
               <img
                 class="gallery-icon"
                 src="../../assets/icons/gallery-round-svgrepo-com.svg"
@@ -43,8 +48,8 @@
               Gallery
             </a>
           </li>
-          <li>
-            <a href="#about-us">
+          <li class="about-us-container">
+            <a href="#about-us" class="about-us">
               <img
                 class="about-us-icon"
                 src="../../assets/icons/user.png"
@@ -52,23 +57,37 @@
               />
               About Us
             </a>
+            <div class="sub-menus">
+              <ul>
+                <li>
+                  <a href="#">Brishia</a>
+                  <a href="#">Ethan</a>
+                  <a href="#">Emil</a>
+                  <a href="#">Ezekiel</a>
+                  <a href="#">Florence</a>
+                  <a href="#">Rence</a>
+                  <a href="#">Genesis</a>
+                  <a href="#">Yainnier</a>
+                </li>
+              </ul>
+            </div>
           </li>
         </ul>
       </nav>
       <div class="middle-section">
-        <div class="image-container">
+        <a href="../../index.html"" class="image-container">
           <img
             class="bagwis-logo"
             src="../../assets/icons/feather.png"
             alt="Logo"
           />
-        </div>
-        <h2>Bagwis</h2>
+        </a>
+        <a href="../../index.html">Bagwis</a>
       </div>
-      <nav class="left-section">
+      <nav class="right-section">
         <ul>
           <li>
-            <a href="#">
+            <a href="#" class="contact-link">
               <img
                 class="contact-icon"
                 src="../../assets/icons/phone-call.png"
@@ -78,7 +97,7 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#" class="donate-link">
               <img
                 class="donate-icon"
                 src="../../assets/icons/donate-svgrepo-com.svg"
@@ -91,6 +110,21 @@
       </nav>
     </header>
 
+    <!-- Youtube Display -->
+    <div class="iframe-container hidden">
+      <iframe
+        src=""
+        frameborder="0"
+        height="500px"
+        width="900px"
+        class="youtube-link"
+      ></iframe>
+      <button class="close-btn">
+        <img src="../../assets/icons/close-md-svgrepo-com.svg" alt="" />
+      </button>
+      <div class="iframe-opacity"></div>
+    </div>
+
     <main>
       <section id="hero">
         <div class="opacity"></div>
@@ -102,7 +136,7 @@
               alt="eagle"
             />
             <img
-              src="./assets/images/hero-images/main-tawi-tawi-sea-snake.jpg"
+              src="./assets/images/hero-images/main-bamboo-shark.jpg"
               alt=""
               class="main-animal-img"
             />
@@ -137,33 +171,37 @@
               class="main-animal-img"
             />
             <img
-              src="./assets/images/hero-images/main-pink-whipray.jpg"
-              alt=""
-              class="main-animal-img"
-            />
-            <!-- !Main Hero KULANG PA FROM HERE -->
-            <img
-              src="./assets/images/hero-images/main-bearcat.jpg"
+              src="./assets/images/hero-images/main-decorator-crab.jpg"
               alt=""
               class="main-animal-img"
             />
             <img
-              src="./assets/images/hero-images/main-horned-frog.jpg"
+              src="./assets/images/hero-images/main-sea-urchin.jpg"
               alt=""
               class="main-animal-img"
             />
             <img
-              src="./assets/images/hero-images/main-forest-turtle.jpeg"
+              src="./assets/images/hero-images/main-octo.jpg"
               alt=""
               class="main-animal-img"
             />
             <img
-              src="./assets/images/main-flying-lemur.jpg"
+              src="./assets/images/hero-images/main-violet-goby.jpg"
               alt=""
               class="main-animal-img"
             />
             <img
-              src="./assets/images/main-maya.jpeg"
+              src="./assets/images/hero-images/main-moorish-idol.jpg"
+              alt=""
+              class="main-animal-img"
+            />
+            <img
+              src="./assets/images/hero-images/main-thresher-shark.jpg"
+              alt=""
+              class="main-animal-img"
+            />
+            <img
+              src="./assets/images/hero-images/main-seahorse.webp"
               alt=""
               class="main-animal-img"
             />
@@ -190,16 +228,17 @@
           </p>
         </div>
 
-        <!-- Search here input  -->
-        <!-- ?kapag may oras gagawin pa search filter -->
-
         <div class="gallery-container">
           <div class="animal-gallery">
             <div class="animal dugong" data-reveal="top">
               <div class="animal-wrapper">
-                <div class="circle-hover">
-                  <span>author here</span>
-                </div>
+                <button class="circle-hover dugong-btn">
+                  <img
+                    src="../../assets/icons/play-circle-ver2.svg"
+                    alt=""
+                    class="play-btn"
+                  />
+                </button>
                 <img src="./assets/images/ph-dugong.avif" alt="" />
               </div>
               <div class="animal-name">
@@ -208,29 +247,36 @@
               <div class="short-intro">
                 <p>The Dugong, a Huggable, Seagrass-Loving Sea Cow.</p>
               </div>
-              <a class="read-more-btn">
+              <a href="./animals/dugong/dugong.html" class="read-more-btn">
                 <span>
                   <span>Read more</span>
                 </span>
               </a>
             </div>
-            <div class="animal tawi-tawi-sea-snake" data-reveal="top">
+            <div class="animal bamboo-shark" data-reveal="top">
               <div class="animal-wrapper">
-                <div class="circle-hover">
-                  <span>author here</span>
-                </div>
-                <img src="./assets/images/tawi-tawi-sea-snake.jpeg" alt="" />
+                <button class="circle-hover bamboo-shark-btn">
+                  <img
+                    src="../../assets/icons/play-circle-ver2.svg"
+                    alt=""
+                    class="play-btn"
+                  />
+                </button>
+                <img src="./assets/images/bamboo-shark.jpg" alt="" />
               </div>
               <div class="animal-name">
-                <h2>Tawi-Tawi Sea Snake</h2>
+                <h2>Bamboo Shark</h2>
               </div>
               <div class="short-intro">
                 <p>
-                  A marine snake endemic to the waters around the Tawi-Tawi
-                  archipelago in the Philippines.
+                  The bamboo shark, native to the Philippines, is a small,
+                  bottom-dwelling shark with distinctive markings.
                 </p>
               </div>
-              <a href="#" class="read-more-btn first">
+              <a
+                href="./animals/bamboo-shark/bamboo-shark.html  "
+                class="read-more-btn first"
+              >
                 <span>
                   <span>Read more</span>
                 </span>
@@ -238,9 +284,13 @@
             </div>
             <div class="animal pawikan" data-reveal="top">
               <div class="animal-wrapper">
-                <div class="circle-hover">
-                  <span>author here</span>
-                </div>
+                <button class="circle-hover pawikan-btn">
+                  <img
+                    src="../../assets/icons/play-circle-ver2.svg"
+                    alt=""
+                    class="play-btn"
+                  />
+                </button>
                 <img src="./assets/images/pawikan.jpg" alt="" />
               </div>
               <div class="animal-name">
@@ -253,7 +303,7 @@
                   ecosystems.
                 </p>
               </div>
-              <a class="read-more-btn">
+              <a href="./animals/pawikan/pawikan.html" class="read-more-btn">
                 <span>
                   <span>Read more</span>
                 </span>
@@ -261,9 +311,13 @@
             </div>
             <div class="animal philippine-butterflyfish" data-reveal="top">
               <div class="animal-wrapper">
-                <div class="circle-hover">
-                  <span>author here</span>
-                </div>
+                <button class="circle-hover butterflyifsh-btn">
+                  <img
+                    src="../../assets/icons/play-circle-ver2.svg"
+                    alt=""
+                    class="play-btn"
+                  />
+                </button>
                 <img src="./assets/images/ph-butterflyfish.jpg" alt="" />
               </div>
               <div class="animal-name">
@@ -271,12 +325,13 @@
               </div>
               <div class="short-intro">
                 <p>
-                  A colorful marine fish. It has a disc-shaped body adorned with
-                  vibrant colors and intricate patterns, including stripes and
-                  spots.
+                  A colorful marine fish with a disc-shaped body adorned with vibrant patterns like stripes and spots.
                 </p>
               </div>
-              <a class="read-more-btn">
+              <a
+                href="./animals/philippine-butterflyfish/philippine-butterflyfish.html"
+                class="read-more-btn"
+              >
                 <span>
                   <span>Read more</span>
                 </span>
@@ -284,9 +339,13 @@
             </div>
             <div class="animal whale-shark" data-reveal="top">
               <div class="animal-wrapper">
-                <div class="circle-hover">
-                  <span>author here</span>
-                </div>
+                <button class="circle-hover whale-shark-btn">
+                  <img
+                    src="../../assets/icons/play-circle-ver2.svg"
+                    alt=""
+                    class="play-btn"
+                  />
+                </button>
                 <img src="./assets/images/ph-whale-shark.jpg" alt="" />
               </div>
               <div class="animal-name">
@@ -298,7 +357,10 @@
                   impressive size, reaching up to 18 meters in length.
                 </p>
               </div>
-              <a class="read-more-btn">
+              <a
+                href="./animals/whale-shark/whale-shark.html"
+                class="read-more-btn"
+              >
                 <span>
                   <span>Read more</span>
                 </span>
@@ -306,9 +368,13 @@
             </div>
             <div class="animal pufferfish" data-reveal="top">
               <div class="animal-wrapper">
-                <div class="circle-hover">
-                  <span>author here</span>
-                </div>
+                <button class="circle-hover pufferfish-btn">
+                  <img
+                    src="../../assets/icons/play-circle-ver2.svg"
+                    alt=""
+                    class="play-btn"
+                  />
+                </button>
                 <img src="./assets/images/pufferfish.jpg" alt="" />
               </div>
               <div class="animal-name">
@@ -320,7 +386,10 @@
                   inflate their bodies as a defense mechanism
                 </p>
               </div>
-              <a class="read-more-btn">
+              <a
+                href="./animals/pufferfish/pufferfish.html"
+                class="read-more-btn"
+              >
                 <span>
                   <span>Read more</span>
                 </span>
@@ -328,9 +397,13 @@
             </div>
             <div class="animal philippine-rabbitfish" data-reveal="top">
               <div class="animal-wrapper">
-                <div class="circle-hover">
-                  <span>author here</span>
-                </div>
+                <button class="circle-hover rabbitfish-btn">
+                  <img
+                    src="../../assets/icons/play-circle-ver2.svg"
+                    alt=""
+                    class="play-btn"
+                  />
+                </button>
                 <img src="./assets/images/rabbitfish.jpg" alt="" />
               </div>
               <div class="animal-name">
@@ -338,12 +411,13 @@
               </div>
               <div class="short-intro">
                 <p>
-                  A colorful marine fish. It is herbivorous, feeding mainly on
-                  algae and seagrasses, and possesses venomous spines for
-                  defense.
+                  A colorful marine herbivore, it feeds on algae and seagrasses and has venomous spines for defense.
                 </p>
               </div>
-              <a class="read-more-btn">
+              <a
+                href="./animals/philippine-rabbitfish/philippine-rabbitfish.html"
+                class="read-more-btn"
+              >
                 <span>
                   <span>Read more</span>
                 </span>
@@ -351,9 +425,13 @@
             </div>
             <div class="animal blue-spotted-stingray" data-reveal="top">
               <div class="animal-wrapper">
-                <div class="circle-hover">
-                  <span>author here</span>
-                </div>
+                <button class="circle-hover blue-spotted-stingray-btn">
+                  <img
+                    src="../../assets/icons/play-circle-ver2.svg"
+                    alt=""
+                    class="play-btn"
+                  />
+                </button>
                 <img src="./assets/images/blue-spotted-stringray.webp" alt="" />
               </div>
               <div class="animal-name">
@@ -366,73 +444,93 @@
                   Philippines.
                 </p>
               </div>
-              <a class="read-more-btn">
+              <a
+                href="./animals/blue-spotted-stingray/blue-spotted-stingray.html"
+                class="read-more-btn"
+              >
                 <span>
                   <span>Read more</span>
                 </span>
               </a>
             </div>
-            <div class="animal pink-whipray" data-reveal="top">
+            <div class="animal decorator-crab" data-reveal="top">
               <div class="animal-wrapper">
-                <div class="circle-hover">
-                  <span>author here</span>
-                </div>
-                <img src="./assets/images/pink-whipray.jpg" alt="" />
+                <button class="circle-hover decorator-crab-btn">
+                  <img
+                    src="../../assets/icons/play-circle-ver2.svg"
+                    alt=""
+                    class="play-btn"
+                  />
+                </button>
+                <img src="./assets/images/decorator-crab.webp" alt="" />
               </div>
               <div class="animal-name">
-                <h2>Pink Whipray</h2>
+                <h2>Decorator Crab</h2>
               </div>
               <div class="short-intro">
                 <p>
-                  A large, flattened ray native to the coastal waters of the
-                  Philippines.
+                  Decorator crabs camouflage by attaching materials to blend
+                  into their environment.
                 </p>
               </div>
-              <a class="read-more-btn">
+              <a
+                href="./animals/decorator-crab/decorator-crab.html"
+                class="read-more-btn"
+              >
                 <span>
                   <span>Read more</span>
                 </span>
               </a>
             </div>
-            <div class="animal velvet" data-reveal="top">
+            <div class="animal sea-urchin" data-reveal="top">
               <div class="animal-wrapper">
-                <div class="circle-hover">
-                  <span>author here</span>
-                </div>
-                <img src="./assets/images/velvet.jpg" alt="" />
+                <button class="circle-hover sea-urchin-btn">
+                  <img
+                    src="../../assets/icons/play-circle-ver2.svg"
+                    alt=""
+                    class="play-btn"
+                  />
+                </button>
+                <img src="./assets/images/sea-urchin.jpg" alt="" />
               </div>
               <div class="animal-name">
-                <h2>Velvet</h2>
+                <h2>Sea Urchin</h2>
               </div>
               <div class="short-intro">
-                <p>
-                  A demersal fish is known for its elongated, flattened body and
-                  broad, triangular head.
-                </p>
+                <p>Sea urchins are small, spiny, globular marine animals.</p>
               </div>
-              <a class="read-more-btn">
+              <a
+                href="./animals/sea-urchin/sea-urchin.html"
+                class="read-more-btn"
+              >
                 <span>
                   <span>Read more</span>
                 </span>
               </a>
             </div>
-            <div class="animal gurnard" data-reveal="top">
+            <div class="animal blue-ringed-octopus" data-reveal="top">
               <div class="animal-wrapper">
-                <div class="circle-hover">
-                  <span>author here</span>
-                </div>
-                <img src="./assets/images/gurnard.jpg" alt="" />
+                <button class="circle-hover blue-ringed-octopus-btn">
+                  <img
+                    src="../../assets/icons/play-circle-ver2.svg"
+                    alt=""
+                    class="play-btn"
+                  />
+                </button>
+                <img src="./assets/images/blue-ringed-octopus.webp" alt="" />
               </div>
               <div class="animal-name">
-                <h2>Gurnard</h2>
+                <h2>Blue Ringed Octopus</h2>
               </div>
               <div class="short-intro">
                 <p>
-                  A fish with wing-like pectoral fins that they use for
-                  "walking" along the sea floor.
+                  The blue-ringed octopus, known for its vibrant blue rings and potent neurotoxin, is highly venomous.
                 </p>
               </div>
-              <a class="read-more-btn">
+              <a
+                href="./animals/blue-ringed-octopus/blue-ringed-octopus.html"
+                class="read-more-btn"
+              >
                 <span>
                   <span>Read more</span>
                 </span>
@@ -440,9 +538,13 @@
             </div>
             <div class="animal violet-goby" data-reveal="top">
               <div class="animal-wrapper">
-                <div class="circle-hover">
-                  <span>author here</span>
-                </div>
+                <button class="circle-hover violet-goby-btn">
+                  <img
+                    src="../../assets/icons/play-circle-ver2.svg"
+                    alt=""
+                    class="play-btn"
+                  />
+                </button>
                 <img src="./assets/images/violet-goby.jpeg" alt="" />
               </div>
               <div class="animal-name">
@@ -454,29 +556,38 @@
                   freshwater lakes of Bicol, Philippines.
                 </p>
               </div>
-              <a class="read-more-btn">
+              <a
+                href="./animals/violet-goby/violet-goby.html"
+                class="read-more-btn"
+              >
                 <span>
                   <span>Read more</span>
                 </span>
               </a>
             </div>
-            <div class="animal philippine-mottled-eel" data-reveal="top">
+            <div class="animal moorish-idol" data-reveal="top">
               <div class="animal-wrapper">
-                <div class="circle-hover">
-                  <span>author here</span>
-                </div>
-                <img src="./assets/images/ph-mottled-eel.jpg" alt="" />
+                <button class="circle-hover moorish-idol-btn">
+                  <img
+                    src="../../assets/icons/play-circle-ver2.svg"
+                    alt=""
+                    class="play-btn"
+                  />
+                </button>
+                <img src="./assets/images/moorish-idol.jpg" alt="" />
               </div>
               <div class="animal-name">
-                <h2>Philippine Mottled Eel</h2>
+                <h2>Moorish Idol</h2>
               </div>
               <div class="short-intro">
                 <p>
-                  A distinct species with an elongated body and a dark and light
-                  brown mottled pattern, giving it a marbled appearance.
+                  The colorful Moorish idol is found in coral reefs, including those in the Philippines.
                 </p>
               </div>
-              <a class="read-more-btn">
+              <a
+                href="./animals/moorish-idol/moorish-idol.html"
+                class="read-more-btn"
+              >
                 <span>
                   <span>Read more</span>
                 </span>
@@ -484,9 +595,13 @@
             </div>
             <div class="animal thresher-shark" data-reveal="top">
               <div class="animal-wrapper">
-                <div class="circle-hover">
-                  <span>author here</span>
-                </div>
+                <button class="circle-hover thresher-shark-btn">
+                  <img
+                    src="../../assets/icons/play-circle-ver2.svg"
+                    alt=""
+                    class="play-btn"
+                  />
+                </button>
                 <img src="./assets/images/thresher-shark.jpg" alt="" />
               </div>
               <div class="animal-name">
@@ -498,7 +613,10 @@
                   longer than the length of its body,
                 </p>
               </div>
-              <a class="read-more-btn">
+              <a
+                href="./animals/thresher-shark/thresher-shark.html"
+                class="read-more-btn"
+              >
                 <span>
                   <span>Read more</span>
                 </span>
@@ -506,9 +624,13 @@
             </div>
             <div class="animal philippine-seahorse" data-reveal="top">
               <div class="animal-wrapper">
-                <div class="circle-hover">
-                  <span>author here</span>
-                </div>
+                <button class="circle-hover seahorse-btn">
+                  <img
+                    src="../../assets/icons/play-circle-ver2.svg"
+                    alt=""
+                    class="play-btn"
+                  />
+                </button>
                 <img src="./assets/images/seahorse.jpg" alt="" />
               </div>
               <div class="animal-name">
@@ -516,12 +638,13 @@
               </div>
               <div class="short-intro">
                 <p>
-                  These small, delicate creatures inhabit coral reefs and are
-                  known for their distinctive horse-like heads and prehensile
-                  tails.
+                  These delicate creatures, known for their horse-like heads and prehensile tails, inhabit coral reefs.
                 </p>
               </div>
-              <a class="read-more-btn">
+              <a
+                href="./animals/philippine-seahorse/philippine-seahorse.html"
+                class="read-more-btn"
+              >
                 <span>
                   <span>Read more</span>
                 </span>
@@ -532,30 +655,73 @@
       </section>
     </main>
 
-    <footer id="about">
-      <div class="terms-policy">
-        <p>Terms of use</p>
-        <div class="divider-line"></div>
-        <p>Privacy Policy</p>
-      </div>
-      <div class="socials">
-        <p>Get in touch with us</p>
-        <div class="social-images">
-          <img src="../../assets/icons/facebook.svg" alt="" />
-          <img src="../../assets/icons/instagram-svgrepo-com.svg" alt="" />
-          <img src="../../assets/icons/linkedin.svg" alt="" />
-          <img src="../../assets/icons/pinterest-svgrepo-com.svg" alt="" />
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-            <path
-              d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
+    <footer>
+      <div class="upper-section">
+        <div class="site-links wrapper">
+          <h3>Picture Links</h3>
+          <a href="#">iNaturalist</a>
+          <a href="#">eBird</a>
+          <a href="#">Wikipedia</a>
+        </div>
+        <div class="legal-information wrapper">
+          <h3>Legal Information</h3>
+          <p>Privacy Policy</p>
+          <p>Terms of Service</p>
+          <p>Copyright Information</p>
+        </div>
+        <div class="social-media wrapper">
+          <h3>Social Media Links</h3>
+          <div class="facebook link">
+            <img src="../../assets/icons/facebook.svg" alt="" class="icon" />
+            <a href="#">Facebook</a>
+          </div>
+          <div class="twitter link">
+            <img src="../../assets/icons/x-twitter.svg" alt="" class="icon" />
+            <a href="#">Twitter</a>
+          </div>
+          <div class="instagram link">
+            <img
+              src="../../assets/icons/instagram-svgrepo-com.svg"
+              alt=""
+              class="icon"
             />
-          </svg>
+            <a href="#">Instagram</a>
+          </div>
+          <div class="pinterest link">
+            <img
+              src="../../assets/icons/pinterest-svgrepo-com.svg"
+              alt=""
+              class="icon"
+            />
+            <a href="#">Pinterest</a>
+          </div>
+        </div>
+        <div class="newsletter wrapper">
+          <h3>Newsletter Signup</h3>
+          <p>Stay updated with our latest news and stories!</p>
+          <div class="email-input">
+            <input type="text" placeholder="Enter your email here" />
+            <button>
+              <img src="../../assets/icons/arrow-right-solid.svg" alt="" />
+            </button>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" />
+            <p>
+              By checking this box, you consent to receive email communications
+              from us.
+            </p>
+          </div>
         </div>
       </div>
+
+      <div class="divider-line"></div>
+      <p class="bagwis-footer-text">© 2024 Bagwis, All rights reserved.</p>
     </footer>
 
     <!-- Javascript -->
     <script src="../src/scroll-reveal-animation.js"></script>
     <script src="../src/automatic-slide.js"></script>
+    <script src="../src/sea-youtube-animals.js"></script>
   </body>
 </html>

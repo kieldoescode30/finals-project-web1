@@ -41,7 +41,6 @@
   position: absolute;
   top: 0;
   opacity: 0;
-  transition: all 0.3s;
 }
 
 .main-animal-img.is-shown {
@@ -93,7 +92,6 @@
 
 #hero .item .content .return-trail-btn {
   color: #fff;
-  background-color: transparent;
   padding: 16px 48px;
   font-size: 13px;
   letter-spacing: 10px;
@@ -137,4 +135,24 @@
 
 #hero .list .item .content .return-trail-btn {
   animation-delay: 1.5s;
+}
+
+/* Media Queries */
+@media (max-width: 1509px) and (min-width: 1086px) {
+  #hero .list .content h2:nth-child(1) {
+    font-size: 46px;
+  }
+
+  #hero .list .content h2:nth-child(2) {
+    font-size: 28px;
+  }
+
+  #hero .list .content h2:nth-child(3) {
+    font-size: 27px;
+    margin-bottom: 48px;
+  }
+
+  #hero .list .item .content .return-trail-btn {
+    padding: 14px 36px;
+  }
 }

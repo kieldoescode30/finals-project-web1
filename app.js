@@ -23,7 +23,6 @@ hiddenElement.forEach((el) => {
 });
 
 const itemEls = document.querySelectorAll(".js-item");
-const terrainImg = document.querySelectorAll(".js-terrain") || null;
 const dotEls = document.querySelectorAll(".js-dot");
 
 let countItem = itemEls.length;

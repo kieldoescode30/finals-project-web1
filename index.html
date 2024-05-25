@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bagwis</title>
+    <!-- Website Icon -->
+    <link
+      rel="shortcut icon"
+      href="./assets/icons/feather-icon.png"
+      type="image/x-icon"
+    />
     <!-- General CSS -->
     <link rel="stylesheet" href="./styles/general.css" />
     <!-- Header CSS -->
@@ -15,13 +21,11 @@
   </head>
 
   <body>
-    <!-- TODO: Make the homepage responsive: add nav burger and add media queries -->
-    <!-- header and navigation bar -->
     <header>
-      <nav class="right-section">
+      <nav class="left-section">
         <ul>
           <li>
-            <a href="#hero">
+            <a href="#hero" class="home-link">
               <img
                 class="home-icon"
                 src="../../assets/icons/home.png"
@@ -31,7 +35,7 @@
             >
           </li>
           <li>
-            <a href="#gallery">
+            <a href="#gallery" class="gallery-link">
               <img
                 class="gallery-icon"
                 src="../../assets/icons/gallery-round-svgrepo-com.svg"
@@ -40,8 +44,8 @@
               Gallery
             </a>
           </li>
-          <li>
-            <a href="#about-us">
+          <li class="about-us-container">
+            <a href="#about-us" class="about-us">
               <img
                 class="about-us-icon"
                 src="../../assets/icons/user.png"
@@ -49,23 +53,37 @@
               />
               About Us
             </a>
+            <div class="sub-menus">
+              <ul>
+                <li>
+                  <a href="#">Brishia</a>
+                  <a href="#">Ethan</a>
+                  <a href="#">Emil</a>
+                  <a href="#">Ezekiel</a>
+                  <a href="#">Florence</a>
+                  <a href="#">Rence</a>
+                  <a href="#">Genesis</a>
+                  <a href="#">Yainnier</a>
+                </li>
+              </ul>
+            </div>
           </li>
         </ul>
       </nav>
       <div class="middle-section">
-        <div class="image-container">
+        <a href="./index.html" class="image-container">
           <img
             class="bagwis-logo"
             src="../../assets/icons/feather.png"
             alt="Logo"
           />
-        </div>
-        <h2>Bagwis</h2>
+        </a>
+        <a href="./index.html">Bagwis</a>
       </div>
-      <nav class="left-section">
+      <nav class="right-section">
         <ul>
           <li>
-            <a href="#">
+            <a href="#" class="contact-link">
               <img
                 class="contact-icon"
                 src="../../assets/icons/phone-call.png"
@@ -75,7 +93,7 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#" class="donate-link">
               <img
                 class="donate-icon"
                 src="../../assets/icons/donate-svgrepo-com.svg"
@@ -250,26 +268,68 @@
       </section>
     </main>
 
-    <footer id="about">
-      <div class="terms-policy">
-        <p>Terms of use</p>
-        <div class="divider-line"></div>
-        <p>Privacy Policy</p>
-      </div>
-      <div class="socials">
-        <p>Get in touch with us</p>
-        <div class="social-images">
-          <img src="./assets/icons/facebook.svg" alt="" />
-          <img src="./assets/icons/instagram-svgrepo-com.svg" alt="" />
-          <img src="./assets/icons/linkedin.svg" alt="" />
-          <img src="./assets/icons/pinterest-svgrepo-com.svg" alt="" />
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-            <path
-              d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
+    <footer>
+      <div class="upper-section">
+        <div class="site-links wrapper">
+          <h3>Picture Links</h3>
+          <a href="#">iNaturalist</a>
+          <a href="#">eBird</a>
+          <a href="#">Wikipedia</a>
+        </div>
+        <div class="legal-information wrapper">
+          <h3>Legal Information</h3>
+          <p>Privacy Policy</p>
+          <p>Terms of Service</p>
+          <p>Copyright Information</p>
+        </div>
+        <div class="social-media wrapper">
+          <h3>Social Media Links</h3>
+          <div class="facebook link">
+            <img src="./assets/icons/facebook.svg" alt="" class="icon" />
+            <a href="#">Facebook</a>
+          </div>
+          <div class="twitter link">
+            <img src="./assets/icons/x-twitter.svg" alt="" class="icon" />
+            <a href="#">Twitter</a>
+          </div>
+          <div class="instagram link">
+            <img
+              src="./assets/icons/instagram-svgrepo-com.svg"
+              alt=""
+              class="icon"
             />
-          </svg>
+            <a href="#">Instagram</a>
+          </div>
+          <div class="pinterest link">
+            <img
+              src="./assets/icons/pinterest-svgrepo-com.svg"
+              alt=""
+              class="icon"
+            />
+            <a href="#">Pinterest</a>
+          </div>
+        </div>
+        <div class="newsletter wrapper">
+          <h3>Newsletter Signup</h3>
+          <p>Stay updated with our latest news and stories!</p>
+          <div class="email-input">
+            <input type="text" placeholder="Enter your email here" />
+            <button>
+              <img src="./assets/icons/arrow-right-solid.svg" alt="" />
+            </button>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" />
+            <p>
+              By checking this box, you consent to receive email communications
+              from us.
+            </p>
+          </div>
         </div>
       </div>
+
+      <div class="divider-line"></div>
+      <p class="bagwis-footer-text">© 2024 Bagwis, All rights reserved.</p>
     </footer>
     <script src="./app.js"></script>
   </body>

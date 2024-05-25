@@ -52,26 +52,30 @@ nav img {
   filter: brightness(0) invert(1);
 }
 
-.right-section {
+.left-section {
   display: flex;
   align-items: center;
   z-index: 1;
 }
 
-.right-section ul {
+.left-section ul {
   display: flex;
   gap: 48px;
   align-items: center;
+  height: 100%;
 }
 
-.right-section a {
+.left-section a {
   display: flex;
   align-items: center;
   gap: 6px;
   position: relative;
 }
 
-header nav a::before {
+.home-link::before,
+.gallery-link::before,
+.contact-link::before,
+.donate-link::before {
   content: "";
   height: 1.5px;
   width: 0%;
@@ -81,11 +85,60 @@ header nav a::before {
   transition: all 0.3s;
 }
 
-header nav a:hover::before {
+.home-link:hover::before,
+.gallery-link:hover::before,
+.contact-link:hover::before,
+.donate-link:hover::before {
   width: 100%;
 }
 
-.right-section ul li img {
+.about-us-container {
+  position: relative;
+  height: 100%;
+  display: flex;
+}
+
+.sub-menus {
+  display: none;
+}
+
+.sub-menus::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0.8px;
+  background-color: #fff;
+}
+
+.sub-menus ul li a {
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.sub-menus ul li a:hover {
+  background-color: rgba(184, 184, 184, 0.3);
+}
+
+.sub-menus ul li {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.about-us-container:hover .sub-menus {
+  display: block;
+  position: absolute;
+  bottom: -355px;
+  padding: 14px 18px;
+  width: 150px;
+  background-color: var(--hunter-green);
+}
+
+.left-section ul li img {
   width: 20px;
   height: 20px;
 }
@@ -112,35 +165,42 @@ header nav a:hover::before {
   right: -8px;
 }
 
-.middle-section h2 {
+.middle-section a {
   color: #fff;
   font-style: italic;
   text-transform: uppercase;
   font-weight: 650;
+  font-size: 26px;
 }
 
 .image-container {
   position: relative;
 }
 
-.left-section {
+.right-section {
   display: flex;
   align-items: center;
   z-index: 1;
 }
 
-.left-section ul {
+.right-section ul {
   display: flex;
   gap: 48px;
 }
 
-.left-section a {
+.right-section a {
   display: flex;
   gap: 6px;
   position: relative;
 }
 
-.left-section ul li img {
+.right-section ul li img {
   width: 20px;
   height: 20px;
+}
+
+@media (max-width: 1509px) and (min-width: 1086px) {
+  .about-us-container:hover .sub-menus {
+    bottom: -340px;
+  }
 }

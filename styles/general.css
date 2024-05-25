@@ -17,6 +17,7 @@
   --mint-green: #ecfdf5;
   --light-green: #059669;
   --light-green-2: #a7f3d0;
+  --light-green-3: rgba(220, 252, 231, 1);
   --space-padding: 48px 74px;
   --text-color-white: #f5f5f5;
   --yellow-green: rgba(101, 163, 13, 1);
@@ -28,4 +29,5 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
+  position: relative;
 }
