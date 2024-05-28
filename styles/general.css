@@ -22,12 +22,12 @@
   --text-color-white: #f5f5f5;
   --yellow-green: rgba(101, 163, 13, 1);
 }
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
   position: relative;
 }

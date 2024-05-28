@@ -1,0 +1,40 @@
+/* here we simply just import a font from google */
+/* with this we can use 'Poppins' font or kung ano yung pinili mo */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+/* asterisk is universal meaning itatarget natin lahat ng elements */
+/* Reset all margin and paddings. */
+/* Box-sizing set to border-box is when we add width and height property yun yung mismong size ng isang element, without box-sizing set to border=box yung padding ng isang element and border ay mag aadd siya sa total width and height ng isang element. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* here we can define some variables that we can reuse within the CSS. */
+/* pag gusto mong gamitin si hunter green color simply use var(--hunter-green) as a value in any property that needs a color. */
+:root {
+  --hunter-green: #064e3b;
+}
+
+/* Element type selector */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* scroll-behavior set to smooth is for when we click an anchor that links within the page, pag pumunta siya dun magiging smooth yung scroll. */
+html {
+  scroll-behavior: smooth;
+  /* scrollbar-width: thin; */
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(214, 214, 214);
+  border-radius: 8px;
+}

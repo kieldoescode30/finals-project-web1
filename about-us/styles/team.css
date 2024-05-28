@@ -1,0 +1,58 @@
+#team {
+  padding: 20px 48px;
+}
+
+#team h1 {
+  font-family: "Manrope", sans-serif;
+  font-size: 3.5rem;
+  line-height: 1.2;
+  font-weight: 800;
+  margin-top: 48px;
+  margin-bottom: 64px;
+}
+
+.group-seven {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 24px;
+  row-gap: 32px;
+  margin-bottom: 48px;
+}
+
+.card img {
+  width: 100%;
+  height: 380px;
+  border: 1px solid #000;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.card img:hover {
+  transform: translateY(-10px) translateX(-10px);
+  filter: drop-shadow(10px 10px 0 rgba(0, 0, 0, 100));
+}
+
+.group-seven h2 {
+  margin-top: 12px;
+}
+
+.group-seven p {
+  font-weight: 500;
+}
+
+.divider-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.divider-wrapper img {
+  width: 30px;
+  height: 30px;
+  margin: 0 12px;
+}
+
+.divider-wrapper .line {
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+}

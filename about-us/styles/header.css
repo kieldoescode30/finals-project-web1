@@ -1,0 +1,73 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 24px;
+}
+
+.left-section {
+  display: flex;
+  gap: 56px;
+}
+
+.bagwis-logo img {
+  width: 150px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+}
+
+.links ul {
+  display: flex;
+  gap: 28px;
+}
+
+.links ul li {
+  list-style-type: none;
+}
+
+.links ul li a {
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s;
+}
+
+.links ul li a:hover {
+  color: var(--hunter-green);
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  padding: 9px 16px;
+  border-radius: 6px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.message-us {
+  background-color: transparent;
+  border: 2px solid var(--hunter-green);
+  color: var(--hunter-green);
+  margin-right: 6px;
+}
+
+.message-us:hover {
+  background-color: var(--hunter-green);
+  color: #fff;
+}
+
+.free-trial {
+  background-color: var(--hunter-green);
+  border: 2px solid var(--hunter-green);
+  color: #fff;
+}
+
+.free-trial:hover {
+  background-color: transparent;
+  color: var(--hunter-green);
+}
