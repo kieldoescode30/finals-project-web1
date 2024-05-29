@@ -58,3 +58,13 @@
   height: 1px;
   background-color: #000;
 }
+
+@media only screen and (max-width: 1593px) {
+  .group-seven {
+    grid-template-columns: repeat(4, 350px);
+  }
+
+  .card img {
+    height: 350px;
+  }
+}
