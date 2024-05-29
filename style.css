@@ -288,6 +288,7 @@
 .land,
 .sea {
   height: 250px;
+  width: 100%;
 }
 
 .air p,
@@ -295,6 +296,10 @@
 .sea p {
   text-align: center;
   font-weight: 250;
+}
+
+.content {
+  width: 400px;
 }
 
 .cards-container .header-card h2 {
