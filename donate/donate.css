@@ -43,6 +43,11 @@ ul {
   text-decoration: none;
   color: #000;
   font-weight: 600;
+  transition: all 0.3s;
+}
+
+.right-section a:hover {
+  color: #064e3b;
 }
 
 .btn {
@@ -180,6 +185,8 @@ ul {
   display: flex;
   align-items: center;
   padding-left: 192px;
+  padding-right: 192px;
+  padding-bottom: 28px;
 }
 
 .divider-wrapper img {
