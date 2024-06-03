@@ -37,6 +37,26 @@ header {
   color: var(--hunter-green);
 }
 
+.products-link {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  background-color: #fff;
+  width: 150px;
+  padding: 12px;
+  position: absolute;
+  top: 60px;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
+  display: none;
+  transition: all 0.3s;
+  border-radius: 8px;
+}
+
+.active {
+  display: block;
+}
+
 .right-section {
   display: flex;
   align-items: center;
